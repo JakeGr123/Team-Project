@@ -4,11 +4,12 @@ score = 0
 angle = 0
 SIZE = 40
 BACKGROUND = pygame.image.load('Background.png')
-BACKGROUND = pygame.transform.scale(BACKGROUND, (500, 500))
+BACKGROUND = pygame.transform.scale(BACKGROUND, (600, 600))
 class Apple:
     def __init__(self, parent_screen):
         self.parent_screen = parent_screen
         self.image = pygame.image.load("monkey.png").convert()
+        self.image = pygame.transform.scale(self.image, (40, 40))
         self.x = 120
         self.y = 120
 
@@ -25,15 +26,15 @@ class Snake:
     def __init__(self, parent_screen):
         self.parent_screen = parent_screen
         self.head_down_image = pygame.image.load('snake head down.png').convert()
-        self.head_down_image = pygame.transform.scale(self.head_down_image, (50, 50))
+        self.head_down_image = pygame.transform.scale(self.head_down_image, (40, 40))
         self.head_up_image = pygame.image.load('snake head up.png').convert()
-        self.head_up_image = pygame.transform.scale(self.head_up_image, (50, 50))
+        self.head_up_image = pygame.transform.scale(self.head_up_image, (40, 40))
         self.head_left_image = pygame.image.load('snake head left.png').convert()
-        self.head_left_image = pygame.transform.scale(self.head_left_image, (50, 50))
+        self.head_left_image = pygame.transform.scale(self.head_left_image, (40, 40))
         self.head_right_image = pygame.image.load('snake head right.png').convert()
-        self.head_right_image = pygame.transform.scale(self.head_right_image, (50, 50))
+        self.head_right_image = pygame.transform.scale(self.head_right_image, (40, 40))
         self.body_image = pygame.image.load("snake block.jpg").convert()
-        self.body_image = pygame.transform.scale(self.body_image, (50, 50))
+        self.body_image = pygame.transform.scale(self.body_image, (40, 40))
         self.direction = 'down'
         self.length = 1
         self.head_x = 40
